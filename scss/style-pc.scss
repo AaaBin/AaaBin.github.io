@@ -1,12 +1,93 @@
+@import "variables";
 
 
+.flex {
+    display: flex;
+}
 
+body {
+    margin: 0;
+}
+h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
 
+* {
+    font-size: $fontSizePc5;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+    color: $color2;
+}
 
-
-
-
-
-
+.container {
+    
 // container寬度:1680px、1200px、900px、100%
 // break point:1700px、1280px、960px、540px
+
+    display: flex;
+    width: 1680px;
+    // background-color: antiquewhite;
+
+    // height: 100vh;
+    @media screen and (max-width:1700px) {
+        width: 1200px;
+    }
+
+    @media screen and (max-width:1280px) {
+        width: 900px;
+    }
+
+    @media screen and (max-width:960px) {
+        width: 100%;
+    }
+}
+
+
+
+.all {
+    .home {
+        .container {
+            margin: 0 auto;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 130px 0 0 0;
+            .home_top_area {
+                justify-content: space-between;
+                padding: 0 0 0 70px;
+                .home_logo_area {
+                    width: 290px;
+                    padding: 40px 0 0 0;
+                    .home_logo_img {
+                        width: 70%;
+                    }
+                }
+
+                .home_banner_area {
+                    border: 3px solid $color2;
+                    border-radius: 5px;
+                }
+            }
+
+            .home_bottom_area {
+                flex-direction: column;
+                position: relative;
+                .home_text_logo_img{
+                    position: absolute;
+                    top: -50px;
+                    left: 350px;
+                    z-index: -1;
+                }
+                .home_title{
+                    font-size: $fontSizePc2;
+                    text-align: center;
+                }
+                .home_subtitle{
+                    font-size: $fontSizePc4;
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+}
