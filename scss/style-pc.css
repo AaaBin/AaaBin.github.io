@@ -74,8 +74,16 @@ h1, h2, h3, h4 {
 }
 
 .all .home .container .home_top_area .home_banner_area {
+  width: 1200px;
+  height: 560px;
   border: 3px solid #215732;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.all .home .container .home_top_area .home_banner_area .banner_parallax_drink {
+  width: 900px;
+  z-index: -1;
 }
 
 .all .home .container .home_bottom_area {

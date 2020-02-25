@@ -64,8 +64,15 @@ h1,h2,h3,h4{
                 }
 
                 .home_banner_area {
+                    width: 1200px;
+                    height: 560px;
                     border: 3px solid $color2;
                     border-radius: 5px;
+                    overflow: hidden;
+                    .banner_parallax_drink{
+                        width: 900px;
+                        z-index: -1;
+                    }
                 }
             }
 
