@@ -16,7 +16,7 @@
                     <div class="home_logo_area">
                         <img src="../01-img/01-pc/02-SVG/pc-home_logo.svg" alt="圓稼logo圖" class="home_logo_img" >
                     </div>
-                    <picture id="banner_parallax" class="home_banner_area" data-hover-only="true" data-origin-x="1"   data-invert-y="false">
+                    <picture id="banner_parallax" class="home_banner_area" data-hover-only="true"  data-invert-y="false" data-invert-x="false">
                         <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_Y.svg" alt="" >
                         <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_U.svg" alt="" >
                         <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_A1.svg" alt="" >
@@ -25,7 +25,7 @@
                         <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_H.svg" alt="" >
                         <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_I.svg" alt="" >
                         <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_A2.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_drink.svg" alt="" data-depth="4.75" class="banner_drink" >
+                        <img src="../01-img/01-pc/01-png/parallax_banner/banner_img_草莓奶酪.png" alt="" data-depth="4.75" class="banner_drink" >
 
                     </picture>
                 </div>
@@ -42,7 +42,7 @@
             </div>
         </section>
 
-        <nav class="navbar">
+        <nav class="navbar" style="">
             <div class="container">
                 <div class="nav_left_area">
                     <div class="nav_logo_area flex">
@@ -61,7 +61,45 @@
         </nav>
 
         <section class="about_us">
-            <div class="container"></div>
+            <div class="container about_us_container1">
+                <div class="about_us_top_section">
+                    <div class="about_us_img_title">
+                        <img src="../01-img/01-pc/02-SVG/pc-about_us_text.svg" alt="">
+                    </div>
+                </div>
+                <div class="about_us_bottom_section">
+                    <div class="text_area">
+                        <h2 class="about_us_title">關於圓稼</h2>
+                        <button class="about_us_content_1 about_us_content">
+                            <h3 class="about_us_content_subtitle">01 品牌故事</h3>
+                            <p class="content">
+                                圓稼，一個來自台中東海商圈，挑戰創新的故事。圓稼正式成立於2017年，圓稼期許能創造出台灣嚼感新風潮。
+                            </p>
+                        </button>
+                        <button class="about_us_content_2 about_us_content">
+                            <h3 class="about_us_content_subtitle">01 品牌故事</h3>
+                            <p class="content">
+                            </p>
+                        </button>
+                        <button class="about_us_content_3 about_us_content">
+                            <h3 class="about_us_content_subtitle">01 品牌故事</h3>
+                            <p class="content">
+                            </p>
+                        </button>
+                        <button class="about_us_content_4 about_us_content">
+                            <h3 class="about_us_content_subtitle">01 品牌故事</h3>
+                            <p class="content">
+                            </p>
+                        </button>
+
+                    </div>
+                    <div class="img_area">
+                        <img src="../01-img/01-pc/02-SVG/pc-about_us_img.svg" alt="">
+                    </div>
+                </div>
+            </div> 
+                
+            
         </section>
 
         <section class="news"></section>
@@ -84,6 +122,27 @@
     <script>
         var scene = document.getElementById('banner_parallax');
         var parallaxInstance = new Parallax(scene);
+    </script>
+
+
+    <script>
+        let st = document.querySelector("html");
+        window.onscroll = function(){   //onscroll事件
+            console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
+        }
+
+        let nav = document.querySelector(".navbar");
+        console.log(nav);
+
+        window.onscroll = function(){
+            if(st.scrollTop >= 200 ){
+                nav.setAttribute("style","position:fixed;top: 0;width: 100%;");
+            }else{
+                nav.setAttribute("style","");
+            }
+        }
+        
+        
     </script>
 </body>
 
