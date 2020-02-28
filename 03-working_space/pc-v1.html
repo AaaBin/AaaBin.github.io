@@ -14,18 +14,20 @@
             <div class="container">
                 <div class="home_top_area flex">
                     <div class="home_logo_area">
-                        <img src="../01-img/01-pc/02-SVG/pc-home_logo.svg" alt="圓稼logo圖" class="home_logo_img" >
+                        <img src="../01-img/01-pc/02-SVG/pc-home_logo.svg" alt="圓稼logo圖" class="home_logo_img">
                     </div>
-                    <picture id="banner_parallax" class="home_banner_area" data-hover-only="true"  data-invert-y="false" data-invert-x="false">
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_Y.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_U.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_A1.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_N.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_C.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_H.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_I.svg" alt="" >
-                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_A2.svg" alt="" >
-                        <img src="../01-img/01-pc/01-png/parallax_banner/banner_img_草莓奶酪.png" alt="" data-depth="4.75" class="banner_drink" >
+                    <picture id="banner_parallax" class="home_banner_area" data-hover-only="true" data-invert-y="false"
+                        data-invert-x="false">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_Y.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_U.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_A1.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_N.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_C.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_H.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_I.svg" alt="">
+                        <img src="../01-img/01-pc/02-SVG/parallax_banner/banner_A2.svg" alt="">
+                        <img src="../01-img/01-pc/01-png/parallax_banner/banner_img_草莓奶酪.png" alt="" data-depth="4.75"
+                            class="banner_drink">
 
                     </picture>
                 </div>
@@ -42,7 +44,7 @@
             </div>
         </section>
 
-        <nav class="navbar" style="">
+        <nav class="navbar">
             <div class="container">
                 <div class="nav_left_area">
                     <div class="nav_logo_area flex">
@@ -94,15 +96,52 @@
 
                     </div>
                     <div class="img_area">
-                        <img src="../01-img/01-pc/02-SVG/pc-about_us_img.svg" alt="">
+                        <div class="about_us_pics">
+                            <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                        </div>
+
+                        <img src="../01-img/01-pc/02-SVG/pc-about_us_img1.svg" alt="" width="150px" class="about_us_decoration1">
+                        <img src="../01-img/01-pc/02-SVG/pc-about_us_img2.svg" alt="" width="70px" class="about_us_decoration2">
+
                     </div>
                 </div>
-            </div> 
-                
-            
+            </div>
+
+
         </section>
 
-        <section class="news"></section>
+        <section class="news">
+            <div class="container">
+                <div class="news_img_title">
+                <img src="../01-img/01-pc/02-SVG/pc-news_text.svg" alt="">
+                </div>
+                <div class="news_content_area">
+                    <div class="news_title_area">
+                        <h2 class="news_title">最新消息</h2>
+                        <span class="news_subtitle">
+                            隨時關注最新消息，不錯過任何活動。
+                        </span>
+                    </div>
+                    <div class="news_content">
+                        <div class="date">
+                            <sapn>2020</sapn>
+                            <sapn>01.22</sapn>
+                        </div>
+                        <div class="news_content_img_area">
+                            <img src="" alt="">
+                        </div>
+                        <h3 class="news_content_title">
+                            飲料喝的對錢包胖一倍   #新店開幕
+                        </h3>
+                        <p class="news_content_text">
+                            過年，大智只想和你一起給他霹哩啪拉紅整年。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            
+        </section>
 
         <section class="product"></section>
 
@@ -127,22 +166,24 @@
 
     <script>
         let st = document.querySelector("html");
-        window.onscroll = function(){   //onscroll事件
+        window.onscroll = function () {   //onscroll事件
             console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
         }
 
         let nav = document.querySelector(".navbar");
-        console.log(nav);
+        let abouot_us_bg = document.querySelector(".about_us")
+        window.onscroll = function () {
+            if (st.scrollTop >= 800) {
+                nav.setAttribute("style", "position:fixed;top: 0;width: 100%;");
+                abouot_us_bg.setAttribute("style","background-image: url(../01-img/01-pc/02-SVG/pc-about_us_bg.svg);")
+            } else {
+                nav.setAttribute("style", "");
+                abouot_us_bg.setAttribute("style", "");
 
-        window.onscroll = function(){
-            if(st.scrollTop >= 200 ){
-                nav.setAttribute("style","position:fixed;top: 0;width: 100%;");
-            }else{
-                nav.setAttribute("style","");
             }
         }
-        
-        
+
+
     </script>
 </body>
 

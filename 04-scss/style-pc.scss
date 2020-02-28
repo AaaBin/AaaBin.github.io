@@ -1,5 +1,5 @@
 @import "variables";
-@import "function" ;
+@import "function";
 
 .flex {
     display: flex;
@@ -8,17 +8,24 @@
 body {
     margin: 0;
 }
-h1,h2,h3,h4,p{
+
+h1,
+h2,
+h3,
+h4,
+p {
     // 刪除預設樣式
     font-size: unset;
     margin: 0;
     padding: 0;
 }
-li{
+
+li {
     // 刪除預設樣式
     list-style: none;
 }
-button{
+
+button {
     // 刪除預設樣式
     display: block;
     margin: 0;
@@ -29,6 +36,7 @@ button{
     align-items: unset;
     outline: unset;
 }
+
 * {
     font-size: $fontSizePc5;
     font-family: 微軟正黑體;
@@ -37,9 +45,9 @@ button{
 }
 
 .container {
-    
-// container寬度:1680px、1200px、900px、100%
-// break point:1700px、1280px、960px、540px
+
+    // container寬度:1680px、1200px、900px、100%
+    // break point:1700px、1280px、960px、540px
 
     display: flex;
     width: 1680px;
@@ -67,13 +75,16 @@ button{
             flex-direction: column;
             min-height: 100vh;
             padding: 100px 0 0 0;
+
             .home_top_area {
                 justify-content: space-between;
                 padding: 0 0 0 70px;
-                margin:0 0 70px 0;
+                margin: 0 0 70px 0;
+
                 .home_logo_area {
                     width: 290px;
                     padding: 40px 0 0 0;
+
                     .home_logo_img {
                         width: 70%;
                     }
@@ -87,9 +98,9 @@ button{
                     overflow: hidden;
                     background-color: $color5;
 
-                    
 
-                    .banner_parallax_drink{
+
+                    .banner_parallax_drink {
                         width: 900px;
                         z-index: -1;
                         left: 80px;
@@ -100,17 +111,20 @@ button{
             .home_bottom_area {
                 flex-direction: column;
                 position: relative;
-                .home_text_logo_img{
+
+                .home_text_logo_img {
                     position: absolute;
                     top: -50px;
                     left: 350px;
                     z-index: -1;
                 }
-                .home_title{
+
+                .home_title {
                     font-size: $fontSizePc2;
                     text-align: center;
                 }
-                .home_subtitle{
+
+                .home_subtitle {
                     font-size: $fontSizePc4;
                     text-align: center;
 
@@ -118,61 +132,78 @@ button{
             }
         }
     }
-    .navbar{
+
+    .navbar {
         position: fixed;
-        .container{
+
+        .container {
             width: 100%;
             height: 75px;
             padding: 0 120px;
             background-color: $color5;
             align-items: center;
-            .nav_left_area{
+
+            .nav_left_area {
                 padding: 0 0 0 25px;
                 margin: 0 auto 0 0;
-                .nav_logo_area{
+
+                .nav_logo_area {
                     align-items: center;
                     width: 70px;
-                    img{
+
+                    img {
                         width: 100%;
                     }
                 }
             }
-            .nav_btn_area{
+
+            .nav_btn_area {
                 width: 1300px;
                 height: 50px;
                 justify-content: space-around;
                 align-items: center;
                 background-color: $color1;
-                li{
+
+                li {
                     // 關門效果的按鈕function
-                    @include close_door_btn($color2,$color1,30px,30px,0.5s)
+                    @include close_door_btn($color2, $color1, 30px, 30px, 0.5s)
                 }
             }
-            .nav_right_area{
+
+            .nav_right_area {
                 display: none;
             }
         }
     }
 
-    .about_us{
-            background-image: url(../01-img/01-pc/02-SVG/pc-about_us_bg.svg); //背景圓弧
-            background-repeat: no-repeat;
-            background-position: right top;
-            background-size: 1800px;
-            padding: 125px 0 0 0;
-        .about_us_container1{
+    .about_us {
+        // background-image: url(../01-img/01-pc/02-SVG/pc-about_us_bg.svg); //背景圓弧
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 1800px;
+        padding: 125px 0 0 0;
+        min-height: 990px;
+
+        .about_us_container1 {
             margin: 0 auto;
             display: unset;
-            .about_us_top_section{
-                width: 1040px
+
+            .about_us_top_section {
+                padding: 0 0 0 70px;
+                img{
+                    height: 225px;
+                }
             }
-            .about_us_bottom_section{
+
+            .about_us_bottom_section {
                 display: flex;
-                .text_area{
+
+                .text_area {
                     width: 480px;
                     margin: 0 140px 0 290px;
                     position: relative;
-                    &::after{
+
+                    &::after {
                         content: "";
                         display: block;
                         width: 1px;
@@ -183,26 +214,71 @@ button{
                         right: -140px;
                     }
 
-                    .about_us_title{
+                    .about_us_title {
                         font-size: $fontSizePc3;
                         margin: 0 0 45px 0;
                     }
-                    .about_us_content{
+
+                    .about_us_content {
                         padding: 0 0 0 50px;
                         margin: 0 0 20px 0;
-                        .about_us_content_subtitle{
+
+                        .about_us_content_subtitle {
                             min-width: 420px;
                             border-bottom: 1px solid $color2;
                             margin: 0 0 25px 0;
                         }
                     }
                 }
-                .img_area{
+
+                .img_area {
                     margin: 45px 0 0 175px;
                     width: 440px;
+                    position: relative;
+
+                    .about_us_pics {
+                        width: 100%;
+                        background-color: $color5;
+                        clip-path: circle(49% at 50% 50%);
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .about_us_decoration1 {
+                        position: absolute;
+                        left: 143px;
+                        bottom: 8px;
+                        z-index: -1;
+                    }
+
+                    .about_us_decoration2 {
+                        position: absolute;
+                        left: 160px;
+                        bottom: 25px;
+                    }
                 }
             }
-            
+
         }
+    }
+
+    .news {
+        .container{
+            flex-wrap: wrap;
+            margin: 0 0 0 auto;
+            .news_img_title {
+                width: 100%;
+                img {
+                    height: 225px;
+                }
+            }
+            .news_content_area{
+                width: 100%;
+                background-color: $color5;
+            }
+        }
+        
     }
 }
