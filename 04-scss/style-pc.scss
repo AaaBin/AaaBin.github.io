@@ -67,16 +67,18 @@ button {
 }
 
 
+// 主內容開始
 
 .all {
     .home {
+        // landing page
         .container {
-            margin: 0 auto;
+            margin: 0 auto; //置中
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh;   //占滿全螢幕
             padding: 100px 0 0 0;
 
-            .home_top_area {
+            .home_top_area {//左邊logo和右邊banner
                 justify-content: space-between;
                 padding: 0 0 0 70px;
                 margin: 0 0 70px 0;
@@ -93,26 +95,23 @@ button {
                 .home_banner_area {
                     width: 1200px;
                     height: 560px;
-                    // border: 3px solid $color2;
                     border-radius: 5px;
                     overflow: hidden;
                     background-color: $color5;
 
-
-
-                    .banner_parallax_drink {
+                    .banner_parallax_drink {   //測試用圖片
                         width: 900px;
                         z-index: -1;
                         left: 80px;
                     }
                 }
             }
-
+            // landing page 底部的title
             .home_bottom_area {
                 flex-direction: column;
                 position: relative;
 
-                .home_text_logo_img {
+                .home_eng_title {  //英文大標
                     position: absolute;
                     top: -50px;
                     left: 350px;
@@ -135,9 +134,10 @@ button {
 
     .navbar {
         position: fixed;
+        z-index: 1;
 
         .container {
-            width: 100%;
+            width: 100%;   //navbar顯示的時候有寬度，所以可以抓到父層寬度
             height: 75px;
             padding: 0 120px;
             background-color: $color5;
@@ -150,7 +150,6 @@ button {
                 .nav_logo_area {
                     align-items: center;
                     width: 70px;
-
                     img {
                         width: 100%;
                     }
@@ -165,7 +164,7 @@ button {
                 background-color: $color1;
 
                 li {
-                    // 關門效果的按鈕function
+                    // 關門效果的按鈕function(顏色*2、寬度、高度、動畫時間)
                     @include close_door_btn($color2, $color1, 30px, 30px, 0.5s)
                 }
             }
@@ -177,25 +176,25 @@ button {
     }
 
     .about_us {
-        // background-image: url(../01-img/01-pc/02-SVG/pc-about_us_bg.svg); //背景圓弧
         background-repeat: no-repeat;
         background-position: right top;
         background-size: 1800px;
         padding: 125px 0 0 0;
         min-height: 990px;
 
-        .about_us_container1 {
+        .container {
             margin: 0 auto;
-            display: unset;
+            flex-direction: column;
 
-            .about_us_top_section {
+            .about_us_top_area {
                 padding: 0 0 0 70px;
-                img{
+
+                img {
                     height: 225px;
                 }
             }
 
-            .about_us_bottom_section {
+            .about_us_bottom_area {
                 display: flex;
 
                 .text_area {
@@ -265,20 +264,188 @@ button {
     }
 
     .news {
-        .container{
+        margin: 0 0 230px 0; //往下間隔product230px
+
+        .container {
             flex-wrap: wrap;
-            margin: 0 0 0 auto;
+            margin: 0 auto;
+
             .news_img_title {
+                padding: 0 0 0 160px;
                 width: 100%;
+                transform: translateY(40px); //靠近content區塊
+
                 img {
                     height: 225px;
                 }
             }
-            .news_content_area{
+
+            .news_content_area {
                 width: 100%;
                 background-color: $color5;
+                border-radius: 50px 75px 115px 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 60px 140px 15px 120px;
+
+                .news_title_area {
+                    width: 220px;
+                    padding: 150px 0 0 0;
+
+                    .news_title {
+                        font-size: $fontSizePc3;
+                    }
+                }
+
+                .news_content {
+                    max-width: 345px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .date {
+                        display: flex;
+                        padding: 30px 0;
+                        transform: translateX(-25px);
+
+                        div:nth-child(1) {
+                            transform: rotate(90deg) translate(0%, -30%); //翻轉
+                        }
+                    }
+
+                    .news_content_img_area {
+                        width: 345px;
+                        height: 345px;
+                        background-color: $color3;
+                        border-radius: 5px;
+                    }
+
+                    h3 {
+                        font-size: $fontSizePc6;
+                    }
+
+                    p {
+                        font-size: $fontSizePc7;
+                    }
+                }
             }
         }
-        
+
     }
+
+    .product {
+        margin: 0 0 115px 0;
+
+        .container {
+            margin: 0 auto;
+            flex-direction: column;
+
+            .product_top {
+                display: flex;
+                margin: 0 0 85px 0; //跟下方間隔85
+
+                .product_top_left {
+                    display: flex;
+                    flex-direction: column;
+                    margin: -20px 50px 0 0;
+                    padding: 0 0 0 40px;
+
+                    .product_title_img {
+                        width: 850px;
+                        margin: 0 0 -40px 0;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .product_title {
+                        font-size: $fontSizePc3;
+                        margin: 0 0 105px 0;
+                    }
+
+                    .product_intro {
+                        margin: 0 0 0 auto;
+
+                        .product_intro_title {
+                            font-size: $fontSizePc4;
+                        }
+                    }
+                }
+
+                .product_top_right {
+                    width: 400px;
+                    height: 560px;
+                    border: 5px solid $color3;
+                    border-radius: 0 30px 0 30px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .product_img {
+                        width: 100%;
+                    }
+
+                    .leaf {
+                        width: 140px;
+                        position: absolute;
+                        top: -95px;
+                        right: -100px;
+                    }
+                }
+            }
+
+            .product_bottom {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .btn_left {
+                    img {
+                        width: 20px;
+                        height: 80px;
+                    }
+                }
+
+                .center_thumbs {
+                    width: 910px;
+                    height: 210px;
+                    margin: 0 25px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .thumb {
+                        width: 150px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        background-color: $color5;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .btn_right {
+                    img {
+                        width: 20px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 過場區塊
+    .interlude {
+        background-color: $color5;
+        width: 100%;
+        height: 340px;
+        margin: 0 0 135px 0;
+        background-image: url(../01-img/01-pc/01-png/parallax_banner/banner_img_草莓奶酪.png);
+        background-attachment: fixed;
+    }
+
 }
