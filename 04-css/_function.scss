@@ -12,6 +12,9 @@
     &:hover{
         color: $color2;
     }
+    &:focus{
+        color: $color2;
+    }
     // hover、fucus時寬度增加，製造關門效果
     &:hover::before {
         width: 55%;

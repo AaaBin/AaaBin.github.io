@@ -1,0 +1,208 @@
+@import 'variables';
+@import 'function';
+
+
+.container {
+    // container寬度:1680px、1200px、900px、540px、100%
+    // break point:1700px、1280px、960px、540px
+
+    max-width: 1680px;
+
+    @media screen and (max-width:1700px) {
+        max-width: 1200px;
+    }
+
+    @media screen and (max-width:1280px) {
+        max-width: 960px;
+    }
+
+    @media screen and (max-width:960px) {
+        max-width: 600px;
+    }
+
+    @media screen and (max-width:600px) {
+        max-width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: $color2;
+    font-family: 微軟正黑體;
+}
+
+li {
+    list-style: none;
+}
+
+.section_title {
+    font-size: $fontSizePc3;
+}
+
+.all {
+
+    // 登陸頁
+    .landing_page {
+        min-height: 100vh;
+
+        .container {
+            .landing_page_top {
+
+                .landing_page_logo {
+                    img {
+                        width: 200px;
+                    }
+                }
+
+                .landing_page_banner {}
+
+                .parralax_banner {
+                    background-color: $color5;
+                }
+            }
+
+            .landing_page_bottom {
+                height: 210px;
+                background-image: url(../01-img/01-pc/01-png/pc-home_text-logo.png);
+                background-repeat: no-repeat;
+                background-size: 1010px;
+                background-position: center -25px;
+
+                h1 {
+                    font-size: $fontSizePc2;
+                    margin: 0;
+                }
+
+                h2 {
+                    font-size: $fontSizePc4;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        z-index: 1;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        .container {
+            max-width: 100%; //navbar顯示的時候有寬度，所以可以抓到父層寬度
+            height: 75px;
+            padding: 0 120px;
+            background-color: $color5;
+            align-items: center;
+
+            .nav_left_area {
+                padding: 0 0 0 25px;
+                margin: 0 auto 0 0;
+
+                .nav_logo_area {
+                    align-items: center;
+                    width: 70px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .nav_btn_area {
+                width: 1300px;
+                height: 50px;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $color1;
+
+                li {
+                    // 關門效果的按鈕function(顏色*2、寬度、高度、動畫時間)
+                    @include close_door_btn($color2, $color1, 30px, 30px, 0.5s)
+                }
+            }
+
+            .nav_right_area {
+                display: none;
+            }
+        }
+    }
+
+    .about_us {
+        min-height: 990px;
+        width: 100%;
+        .about_us_bg_container {
+            padding: 0;
+            max-width: 100%;
+
+            .about_us_bg {
+                width: 1800px;
+            }
+        }
+
+        .container {
+            position: relative;
+            .about_us_top {
+                img {
+                    top: -400px;
+                    left: 0px;
+                }
+            }
+
+            .about_us_bottom {
+                width: 100%;
+                position: absolute;
+                bottom: -350px;
+                .about_us_bottom_left {
+                    width: 560px;
+                    border-right: 2px solid $color2;
+                    padding: 0 140px 0 0;
+                    margin: 0 100px 0 0;
+                    .about_us_content_area{
+                        .about_us_features{
+                            hr{
+                                margin: 0;
+                                border: 1px solid $color2;
+                            }
+                            h3{
+                                font-size: $fontSizePc5;
+                            }
+                            article{
+                                font-size: $fontSizePc5;
+                                line-height: 36px;
+                            }
+                        }
+                    }
+                }
+
+                .about_us_bottom_right {
+                    .about_us_img_area {
+                        width: 440px;
+                        clip-path: circle(45% at 50% 50%);
+                        background-color: $color5;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .leaf {
+                        width: 70px;
+                        bottom: 15px;
+                        left: 170px;
+                    }
+                    .plate {
+                        width: 150px;
+                        bottom: 0;
+                        left: 145px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+
+}

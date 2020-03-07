@@ -1,0 +1,259 @@
+@charset "UTF-8";
+.container {
+  max-width: 1680px;
+}
+
+@media screen and (max-width: 1700px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #215732;
+  font-family: 微軟正黑體;
+}
+
+li {
+  list-style: none;
+}
+
+.section_title {
+  font-size: 50px;
+}
+
+.all .landing_page {
+  min-height: 100vh;
+}
+
+.all .landing_page .container .landing_page_top .landing_page_logo img {
+  width: 200px;
+}
+
+.all .landing_page .container .landing_page_top .parralax_banner {
+  background-color: #EFF3F0;
+}
+
+.all .landing_page .container .landing_page_bottom {
+  height: 210px;
+  background-image: url(../01-img/01-pc/01-png/pc-home_text-logo.png);
+  background-repeat: no-repeat;
+  background-size: 1010px;
+  background-position: center -25px;
+}
+
+.all .landing_page .container .landing_page_bottom h1 {
+  font-size: 72px;
+  margin: 0;
+}
+
+.all .landing_page .container .landing_page_bottom h2 {
+  font-size: 36px;
+}
+
+.all .navbar {
+  z-index: 1;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.all .navbar .container {
+  max-width: 100%;
+  height: 75px;
+  padding: 0 120px;
+  background-color: #EFF3F0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.all .navbar .container .nav_left_area {
+  padding: 0 0 0 25px;
+  margin: 0 auto 0 0;
+}
+
+.all .navbar .container .nav_left_area .nav_logo_area {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+}
+
+.all .navbar .container .nav_left_area .nav_logo_area img {
+  width: 100%;
+}
+
+.all .navbar .container .nav_btn_area {
+  width: 1300px;
+  height: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F3E4BF;
+}
+
+.all .navbar .container .nav_btn_area li {
+  padding: 0 30px;
+  text-align: center;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  position: relative;
+  color: #215732;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.all .navbar .container .nav_btn_area li:hover {
+  color: #F3E4BF;
+}
+
+.all .navbar .container .nav_btn_area li:focus {
+  color: #F3E4BF;
+}
+
+.all .navbar .container .nav_btn_area li:hover::before {
+  width: 55%;
+}
+
+.all .navbar .container .nav_btn_area li:hover::after {
+  width: 55%;
+}
+
+.all .navbar .container .nav_btn_area li:focus::before {
+  width: 55%;
+}
+
+.all .navbar .container .nav_btn_area li:focus::after {
+  width: 55%;
+}
+
+.all .navbar .container .nav_btn_area li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  display: block;
+  width: 3px;
+  height: 30px;
+  background-color: #215732;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.all .navbar .container .nav_btn_area li::before {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  content: "";
+  display: block;
+  width: 3px;
+  height: 30px;
+  background-color: #215732;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.all .navbar .container .nav_right_area {
+  display: none;
+}
+
+.all .about_us {
+  min-height: 990px;
+  width: 100%;
+}
+
+.all .about_us .about_us_bg_container {
+  padding: 0;
+  max-width: 100%;
+}
+
+.all .about_us .about_us_bg_container .about_us_bg {
+  width: 1800px;
+}
+
+.all .about_us .container {
+  position: relative;
+}
+
+.all .about_us .container .about_us_top img {
+  top: -400px;
+  left: 0px;
+}
+
+.all .about_us .container .about_us_bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -350px;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_left {
+  width: 560px;
+  border-right: 2px solid #215732;
+  padding: 0 140px 0 0;
+  margin: 0 100px 0 0;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features hr {
+  margin: 0;
+  border: 1px solid #215732;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features h3 {
+  font-size: 24px;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_left .about_us_content_area .about_us_features article {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_right .about_us_img_area {
+  width: 440px;
+  -webkit-clip-path: circle(45% at 50% 50%);
+          clip-path: circle(45% at 50% 50%);
+  background-color: #EFF3F0;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_right .about_us_img_area img {
+  width: 100%;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_right .leaf {
+  width: 70px;
+  bottom: 15px;
+  left: 170px;
+}
+
+.all .about_us .container .about_us_bottom .about_us_bottom_right .plate {
+  width: 150px;
+  bottom: 0;
+  left: 145px;
+  z-index: -1;
+}
+/*# sourceMappingURL=v1.css.map */
