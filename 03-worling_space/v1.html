@@ -73,7 +73,7 @@
         </nav>
         <div class="about_us">
             <div class="container about_us_bg_container d-flex justify-content-end">
-                <img class="about_us_bg" src="../01-img/01-pc/01-png/pc-about_us_bg.png" alt="">
+                <img class="about_us_bg lax" src="../01-img/01-pc/01-png/pc-about_us_bg.png" alt="" data-lax-opacity='700 0 ,1000 1'>
             </div>
             <div class="container">
                 <div class="about_us_top position-relative">
@@ -88,7 +88,7 @@
                                 <h3>01 品牌故事</h3>
                                 <hr>
                                 <article>
-                                        圓稼，一個來自台中東海商圈，挑戰創新的故事。圓稼正式成立於2017年，圓稼期許能創造出台灣嚼感新風潮。
+                                    圓稼，一個來自台中東海商圈，挑戰創新的故事。圓稼正式成立於2017年，圓稼期許能創造出台灣嚼感新風潮。
                                 </article>
                                 <h3>02 白玉珍珠</h3>
                                 <hr>
@@ -111,8 +111,22 @@
                 </div>
             </div>
         </div>
-        <div class="news">
-            <div class="container"></div>
+        <div class="news d-flex flex-column">
+            <div class="container">
+                <div class="news_top position-relative">
+                    <img class="position-absolute" src="../01-img/01-pc/01-png/pc-news_text.png" alt="">
+                </div>
+            </div>
+            <div class="news_bottom_container container">
+                <div class="news_bottom">
+                    <div class="news_text_area"></div>
+                    <div class="news_cards">
+                        <div class="news_card"></div>
+                        <div class="news_card"></div>
+                        <div class="news_card"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="product">
             <div class="container"></div>
@@ -152,6 +166,30 @@
         // 初始化banner parallax
         var scene = document.getElementById('banner_parallax');
         var parallaxInstance = new Parallax(scene);
+    </script>
+    <!-- lax.js -->
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+        // 初始化lax
+        window.onload = function () {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+    <script>
+        // 偵測scrolltop值
+        let st = document.querySelector("html");
+        window.onscroll = function(){   //onscroll事件
+            console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
+        }
+
+        
     </script>
 </body>
 

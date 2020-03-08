@@ -42,8 +42,21 @@ li {
   font-size: 50px;
 }
 
-.all .landing_page {
-  min-height: 100vh;
+.landing_page, .about_us, .news, .product, .menu, .store, .join_us {
+  max-width: 2000px;
+}
+
+.all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .all .landing_page .container .landing_page_top .landing_page_logo img {
@@ -235,8 +248,8 @@ li {
 
 .all .about_us .container .about_us_bottom .about_us_bottom_right .about_us_img_area {
   width: 440px;
-  -webkit-clip-path: circle(45% at 50% 50%);
-          clip-path: circle(45% at 50% 50%);
+  -webkit-clip-path: circle(49% at 50% 50%);
+          clip-path: circle(49% at 50% 50%);
   background-color: #EFF3F0;
 }
 
@@ -246,14 +259,31 @@ li {
 
 .all .about_us .container .about_us_bottom .about_us_bottom_right .leaf {
   width: 70px;
-  bottom: 15px;
+  bottom: 0px;
   left: 170px;
 }
 
 .all .about_us .container .about_us_bottom .about_us_bottom_right .plate {
   width: 150px;
-  bottom: 0;
+  bottom: -15px;
   left: 145px;
   z-index: -1;
+}
+
+.all .news {
+  padding: 200px 0 0 0;
+}
+
+.all .news .container .news_top img {
+  left: 150px;
+  top: -200px;
+}
+
+.all .news .news_bottom_container {
+  width: 1700px;
+  height: 300px;
+  margin: 0 0 0 auto;
+  background-color: #EFF3F0;
+  border-radius: 100px 100px 100px 50px;
 }
 /*# sourceMappingURL=v1.css.map */
