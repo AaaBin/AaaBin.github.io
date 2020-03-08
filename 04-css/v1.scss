@@ -41,6 +41,12 @@ li {
 .landing_page,.about_us,.news,.product,.menu,.store,.join_us{
     max-width: 2000px;
 }
+button{
+    margin: 0;
+    padding: 2px 4px;
+    border: 0;
+
+}
 
 .all {
     display: flex;
@@ -207,6 +213,8 @@ li {
 
     .news{
         padding: 200px 0 0 0;
+        width: 100%;
+        margin: 0 0 230px 0;
         .container{
             .news_top{
                 img{
@@ -217,10 +225,70 @@ li {
         }
         .news_bottom_container{
             width: 1700px;
-            height: 300px;
             margin: 0 0 0 auto;
             background-color: $color5;
             border-radius: 100px 100px 100px 50px;
+            padding: 85px 140px 30px 120px;
+            .news_bottom{
+                .news_text_area{
+                    width: 220px;
+                    margin: 0 85px 0 0;
+                    padding: 65px 0 0 0;
+                    p{
+                        font-size: $fontSizePc5;
+                    }
+                }
+                .news_cards{
+                    flex: 1;
+                    .news_card{
+                        width: 345px;
+                        .news_card_time_area{
+                            padding: 10px 0;
+                            margin: 0 auto 0 0;
+                            .year{
+                                transform: rotate(90deg) translateX(0);
+                            }
+                            .month_n_date{
+
+                            }
+                        }
+                        .news_img_area{
+                            width: 100%;
+                            background-color: $color4;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        h4{
+                            font-size: $fontSizePc6 ;
+                            margin: 0 auto 10px 0;
+                        }
+                        p{
+                            font-size: $fontSizePc7;
+                            margin: 0 0 10px 0;
+                        }
+                        button{
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .product{
+        .container{
+            .product_top{
+                img{
+
+                }
+                .product_top_content{
+
+                }
+                .product_top_img{
+
+                }
+            }
         }
     }
 
