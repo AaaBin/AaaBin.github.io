@@ -254,7 +254,7 @@ button{
                         }
                         .news_img_area{
                             width: 100%;
-                            background-color: $color4;
+                            background-color: $color3;
                             img{
                                 width: 100%;
                             }
@@ -277,16 +277,208 @@ button{
     }
     
     .product{
+        width: 100%;
+        margin: 0 0 150px 0;
         .container{
             .product_top{
+                padding: 0 0 0 280px;
+                margin: 0 60px 85px 0;
                 img{
-
+                    left: 20px;
+                    top: 30px;
                 }
                 .product_top_content{
+                    width: 600px;
+                    padding: 220px 0 0 0;
+                    margin: 0 60px 0 0;
+                    .product_title{
 
+                    }
+                    .product_intro{
+                        margin: 0 0 0 auto;
+                        .product_content_intro_title{
+                            font-size: $fontSizePc4;
+                        }
+                        .product_content_intro_text{
+                            font-size: $fontSizePc5;
+                        }
+                    }
+                    
                 }
                 .product_top_img{
+                    width: 475px;
+                    .product_intro_img{
+                        width: 100%;
+                    }
+                    .product_img_border{
+                        top: -100px;
+                        left: 50px;
+                    }
+                }
+            }
+            .product_bottom{
+                .product_thumbs_area{
+                    width: 100%;
+                    .product_thumbs{
+                        width: 910px;
+                        padding: 0 25px;
+                        .product_thumb{
+                            width: 150px;
+                            height: 210px;
+                            background-color: $color5;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
+    .interlude{
+        width: 100%;
+        height: 300px;
+        background-color: $color1;
+        margin: 0 0 335px 0;;
+    }
+    .menu{
+        width: 100%;
+        margin: 0 0 550px 0;
+        .menu_background{
+            left: 510px;
+            z-index: -1;
+        }
+        .container{
+            .menu_title_area{
+                width: 820px;
+                padding: 0 0 0 150px;
+                img{
+                    width: 530px;
+                }
+                h2{
+                    padding: 0 0 0 80px;
+                }
+                .menu_legend{
+                    width: 420px;
+                    margin: 0 0 0 auto;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: $color6;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20px;
+                    }
+
+                    span{
+                        margin: 0 40px 0 0;
+                    }
+                    i{
+                        font-size: 15px;
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+
+            .menu_drinks{
+                .menu_drink_kind{
+                    width: 360px;
+                    margin: 0 30px 0 0 ;
+                    &:nth-child(1),&:nth-child(2){
+                        padding: 350px 0 0 0;
+                    }
+                    .kind_title{
+                        width: 100%;
+                        height: 50px;
+                        background-color: $color5;
+                        margin: 0 0 15px 0;
+                        h3{
+                            font-size: $fontSizePc4;
+                        }
+                    }
+                    .drink_box{
+                        width: 320px;
+                        padding: 3px 10px;
+                        font-size: $fontSizePc6;
+                        background-color: $color1;
+                        margin: 0 0 15px 0;
+                        .drink_name{
+                            margin: 0 auto 0 0;
+                        }
+                        .drink_price{
+                            margin: 0 15px 0 0;
+                        }
+                        .hot_icon_area{
+                            i{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .store{
+        width: 100%;
+        background-color: $color5;
+        margin: 0 0 150px 0;
+        .container{
+            .store_title_area{
+                top: -270px;
+                left: 100px;
+                h2{
+                    margin: 0 0 0 120px;
+                }
+            }
+            .store_map_area{
+                padding: 15px 100px;
+                iframe{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .join_us{
+        padding: 150px 0 240px 0;
+        width: 100%;
+        .container{
+            padding: 0 150px;
+            img{
+                top: -200px;
+                left: 50px;
+            }
+            .join_us_form_area{
+                border: 1px solid $color2;
+                padding: 3px 30px;
+                .join_us_form_left{
+                    padding: 50px 0 40px 0;
+                    .form_column{
+                        margin: 0 0 15px 0;
+                        .column_name{
+                            text-align: center;
+                            width: 100px;
+                            margin: 0 10px 0 0 ;
+                        }
+                        .column_space{
+                            width: 550px;
+                            height: 45px;
+                            border: 1px solid $color2;
+                        }
+                    }
+                    .form_btn{
+                        padding: 5px 10px;
+                        border: 1px solid $color2;
+                    }
+                }
+                .join_us_form_right{
+                    width: 300px;
+                    background-color: $color5;
                 }
             }
         }

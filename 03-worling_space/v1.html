@@ -8,6 +8,8 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <!-- 個人css -->
     <link rel="stylesheet" href="../04-css/v1.css">
 </head>
@@ -21,7 +23,7 @@
                         <img src="../01-img/01-pc/01-png/pc-home_logo.png" alt="圓稼主logo">
                     </div>
                     <div class="landing_page_banner col-8 mr-5">
-                        <div id="banner_parallax" class="parralax_banner overflow-hidden " data-hover-only='false'>
+                        <div id="banner_parallax" class="parralax_banner overflow-hidden rounded-lg" data-hover-only='false' >
                             <img src="../01-img/01-pc/01-png/parallax_banner/banner_parallax_Y.png" alt=""
                                 data-depth="1.4">
                             <img src="../01-img/01-pc/01-png/parallax_banner/banner_parallax_Y.png" alt=""
@@ -171,30 +173,438 @@
         </div>
         <div class="product">
             <div class="container">
-                <div class="product_top position-relative">
+                <div class="product_top position-relative d-flex">
                     <img class="position-absolute" src="../01-img/01-pc/01-png/pc-product_text.png" alt="">
-                    <div class="product_top_content">
+                    <div class="product_top_content d-flex flex-column ">
                         <h2 class="product_title section_title">圓稼全明星</h2>
-                        <div class="product_content_intro_title">圓稼招牌嚼感鮮奶茶</div>
-                        <p class="product_content_intro_text">估溜溜澄金粉粿
-                            一粒粒綿密紅豆
-                            悠游在濃郁鮮奶的世界裡
-                            暢遊回味著美好回憶</p>
+                        <div class="product_intro">
+                            <div class="product_content_intro_title">圓稼招牌嚼感鮮奶茶</div>
+                            <p class="product_content_intro_text">
+                                估溜溜澄金粉粿<br>
+                                一粒粒綿密紅豆<br>
+                                悠游在濃郁鮮奶的世界裡<br>
+                                暢遊回味著美好回憶
+                            </p>
+                        </div>
                     </div>
-                    <div class="product_top_img">
-                        
+                    <div class="product_top_img position-relative">
+                        <img class="product_intro_img" src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                        <img class="product_img_border position-absolute" src="../01-img/01-pc/01-png/pc-product_border_img.png" alt="">
+                    </div>
+                </div>
+                <div class="product_bottom">
+                    <div class="product_thumbs_area d-flex justify-content-center align-items-center ">
+                        <img src="../01-img/01-pc/01-png/pc-product_arrow_left.png" alt="">
+                        <div class="product_thumbs d-flex justify-content-between">
+                            <div class="product_thumb rounded d-flex align-items-center">
+                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                            </div>
+                            <div class="product_thumb rounded d-flex align-items-center">
+                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                            </div>
+                            <div class="product_thumb rounded d-flex align-items-center">
+                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                            </div>
+                            <div class="product_thumb rounded d-flex align-items-center">
+                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                            </div>
+                            <div class="product_thumb rounded d-flex align-items-center">
+                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
+                            </div>
+                        </div>
+                        <img src="../01-img/01-pc/01-png/pc-product_arrow_right.png" alt="">
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="interlude"></div>
+        <div class="menu position-relative">
+            <img class="menu_background position-absolute" src="../01-img/01-pc/01-png/pc-menu_img.png" alt="">
+            <div class="container">
+                <div class="menu_title_area d-flex flex-column position-absolute">
+                    <img src="../01-img/01-pc/01-png/pc-menu_text.png" alt="">
+                    <h2 class="menu_title section_title">全品項</h2>
+                    <div class="menu_legend d-flex align-items-center justify-content-center">
+                        <i class="fas fa-crown"></i>
+                        <span>人氣飲品</span>
+                        <i class="fas fa-circle"></i>
+                        <span>提供熱飲</span>
+                    </div>
+                </div>
+                <div class="menu_drinks d-flex justify-content-around">
+                    <div class="menu_drink_kind d-flex align-items-center flex-column">
+                        <div class="kind_title d-flex align-items-center justify-content-center">
+                            <h3>珍珠奶茶</h3>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_drink_kind d-flex align-items-center flex-column">
+                        <div class="kind_title d-flex align-items-center justify-content-center">
+                            <h3>珍珠奶茶</h3>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_drink_kind d-flex align-items-center flex-column">
+                        <div class="kind_title d-flex align-items-center justify-content-center">
+                            <h3>珍珠奶茶</h3>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_drink_kind d-flex align-items-center flex-column">
+                        <div class="kind_title d-flex align-items-center justify-content-center">
+                            <h3>珍珠奶茶</h3>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="kind_title d-flex align-items-center justify-content-center">
+                            <h3>珍珠奶茶</h3>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="drink_box d-flex align-items-center">
+                            <div class="drink_name">珍珠奶茶</div>
+                            <div class="drink_price">50</div>
+                            <div class="hot_icon_area">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="menu">
-            <div class="container"></div>
-        </div>
         <div class="store">
-            <div class="container"></div>
+            <div class="container position-relative">
+                <div class="store_title_area position-absolute">
+                    <img src="../01-img/01-pc/01-png/pc-store_text.png" alt="">
+                    <h2 class="store_title section_title">全台分店</h2>
+                </div>
+                <div class="store_map_area">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.714569299978!2d120.59040791536795!3d24.18174107807726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e27503674ad%3A0xec11bbc585d990ab!2z5ZyT56i84oCn5Zq85oSf5aW26Iy25bCI6LOj!5e0!3m2!1szh-TW!2stw!4v1583686349373!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
         </div>
         <div class="join_us">
-            <div class="container"></div>
+            <div class="container position-relative">
+                <img class="position-absolute" src="../01-img/01-pc/01-png/pc-join_us_text.png" alt="">
+                <h2 class="join_us_title section_title">加盟</h2>
+                <div class="join_us_form_area d-flex justify-content-around">
+                    <div class="join_us_form_left d-flex flex-column align-items-center">
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">姓名</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">行動電話</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">電子郵件</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">聯絡地址</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">加盟區域</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">店面需求</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_column d-flex align-items-center">
+                            <div class="column_name">備註說明</div>
+                            <div class="column_space"></div>
+                        </div>
+                        <div class="form_btn">
+                            送出資料
+                            <i class="far fa-paper-plane"></i>
+                        </div>
+                    </div>
+                    <div class="join_us_form_right"></div>
+                </div>
+            </div>
         </div>
     </div>
 

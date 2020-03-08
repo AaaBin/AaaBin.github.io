@@ -327,7 +327,7 @@ button {
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card .news_img_area {
   width: 100%;
-  background-color: #FEE2CC;
+  background-color: #16A27D;
 }
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card .news_img_area img {
@@ -346,5 +346,237 @@ button {
 
 .all .news .news_bottom_container .news_bottom .news_cards .news_card button {
   margin: 0 0 0 auto;
+}
+
+.all .product {
+  width: 100%;
+  margin: 0 0 150px 0;
+}
+
+.all .product .container .product_top {
+  padding: 0 0 0 280px;
+  margin: 0 60px 85px 0;
+}
+
+.all .product .container .product_top img {
+  left: 20px;
+  top: 30px;
+}
+
+.all .product .container .product_top .product_top_content {
+  width: 600px;
+  padding: 220px 0 0 0;
+  margin: 0 60px 0 0;
+}
+
+.all .product .container .product_top .product_top_content .product_intro {
+  margin: 0 0 0 auto;
+}
+
+.all .product .container .product_top .product_top_content .product_intro .product_content_intro_title {
+  font-size: 36px;
+}
+
+.all .product .container .product_top .product_top_content .product_intro .product_content_intro_text {
+  font-size: 24px;
+}
+
+.all .product .container .product_top .product_top_img {
+  width: 475px;
+}
+
+.all .product .container .product_top .product_top_img .product_intro_img {
+  width: 100%;
+}
+
+.all .product .container .product_top .product_top_img .product_img_border {
+  top: -100px;
+  left: 50px;
+}
+
+.all .product .container .product_bottom .product_thumbs_area {
+  width: 100%;
+}
+
+.all .product .container .product_bottom .product_thumbs_area .product_thumbs {
+  width: 910px;
+  padding: 0 25px;
+}
+
+.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb {
+  width: 150px;
+  height: 210px;
+  background-color: #EFF3F0;
+}
+
+.all .product .container .product_bottom .product_thumbs_area .product_thumbs .product_thumb img {
+  width: 100%;
+}
+
+.all .interlude {
+  width: 100%;
+  height: 300px;
+  background-color: #F3E4BF;
+  margin: 0 0 335px 0;
+}
+
+.all .menu {
+  width: 100%;
+  margin: 0 0 550px 0;
+}
+
+.all .menu .menu_background {
+  left: 510px;
+  z-index: -1;
+}
+
+.all .menu .container .menu_title_area {
+  width: 820px;
+  padding: 0 0 0 150px;
+}
+
+.all .menu .container .menu_title_area img {
+  width: 530px;
+}
+
+.all .menu .container .menu_title_area h2 {
+  padding: 0 0 0 80px;
+}
+
+.all .menu .container .menu_title_area .menu_legend {
+  width: 420px;
+  margin: 0 0 0 auto;
+  position: relative;
+}
+
+.all .menu .container .menu_title_area .menu_legend::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #F3D285;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+}
+
+.all .menu .container .menu_title_area .menu_legend span {
+  margin: 0 40px 0 0;
+}
+
+.all .menu .container .menu_title_area .menu_legend i {
+  font-size: 15px;
+  margin: 0 15px 0 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind {
+  width: 360px;
+  margin: 0 30px 0 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind:nth-child(1), .all .menu .container .menu_drinks .menu_drink_kind:nth-child(2) {
+  padding: 350px 0 0 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .kind_title {
+  width: 100%;
+  height: 50px;
+  background-color: #EFF3F0;
+  margin: 0 0 15px 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .kind_title h3 {
+  font-size: 36px;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .drink_box {
+  width: 320px;
+  padding: 3px 10px;
+  font-size: 21px;
+  background-color: #F3E4BF;
+  margin: 0 0 15px 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .drink_box .drink_name {
+  margin: 0 auto 0 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .drink_box .drink_price {
+  margin: 0 15px 0 0;
+}
+
+.all .menu .container .menu_drinks .menu_drink_kind .drink_box .hot_icon_area i {
+  font-size: 15px;
+}
+
+.all .store {
+  width: 100%;
+  background-color: #EFF3F0;
+  margin: 0 0 150px 0;
+}
+
+.all .store .container .store_title_area {
+  top: -270px;
+  left: 100px;
+}
+
+.all .store .container .store_title_area h2 {
+  margin: 0 0 0 120px;
+}
+
+.all .store .container .store_map_area {
+  padding: 15px 100px;
+}
+
+.all .store .container .store_map_area iframe {
+  width: 100%;
+}
+
+.all .join_us {
+  padding: 150px 0 240px 0;
+  width: 100%;
+}
+
+.all .join_us .container {
+  padding: 0 150px;
+}
+
+.all .join_us .container img {
+  top: -200px;
+  left: 50px;
+}
+
+.all .join_us .container .join_us_form_area {
+  border: 1px solid #215732;
+  padding: 3px 30px;
+}
+
+.all .join_us .container .join_us_form_area .join_us_form_left {
+  padding: 50px 0 40px 0;
+}
+
+.all .join_us .container .join_us_form_area .join_us_form_left .form_column {
+  margin: 0 0 15px 0;
+}
+
+.all .join_us .container .join_us_form_area .join_us_form_left .form_column .column_name {
+  text-align: center;
+  width: 100px;
+  margin: 0 10px 0 0;
+}
+
+.all .join_us .container .join_us_form_area .join_us_form_left .form_column .column_space {
+  width: 550px;
+  height: 45px;
+  border: 1px solid #215732;
+}
+
+.all .join_us .container .join_us_form_area .join_us_form_left .form_btn {
+  padding: 5px 10px;
+  border: 1px solid #215732;
+}
+
+.all .join_us .container .join_us_form_area .join_us_form_right {
+  width: 300px;
+  background-color: #EFF3F0;
 }
 /*# sourceMappingURL=v1.css.map */
