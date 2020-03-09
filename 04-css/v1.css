@@ -579,4 +579,12 @@ button {
   width: 300px;
   background-color: #EFF3F0;
 }
+
+.all .footer .container .footer_logo {
+  width: 80px;
+}
+
+.all .footer .container .footer_logo img {
+  width: 100%;
+}
 /*# sourceMappingURL=v1.css.map */
