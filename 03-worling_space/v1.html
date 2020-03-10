@@ -194,21 +194,10 @@
                 </div>
                 <div class="product_bottom">
                     <div class="product_thumbs_area d-flex justify-content-center align-items-center ">
-                        <img src="../01-img/01-pc/01-png/pc-product_arrow_left.png" alt="">
+                        <img class="align-self-center" src="../01-img/01-pc/01-png/pc-product_arrow_left.png" alt="">
                         <div class="product_thumbs d-flex justify-content-between">
-                            <div class="product_thumb rounded d-flex align-items-center">
-                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
-                            </div>
-                            <div class="product_thumb rounded d-flex align-items-center">
-                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
-                            </div>
-                            <div class="product_thumb rounded d-flex align-items-center">
-                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
-                            </div>
-                            <div class="product_thumb rounded d-flex align-items-center">
-                                <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
-                            </div>
-                            <div class="product_thumb rounded d-flex align-items-center">
+                            <div class="product_thumb rounded d-flex align-items-center ;" >
+                                <div class="mask"></div>
                                 <img src="../01-img/測試用圖片/草莓奶酪.png" alt="">
                             </div>
                         </div>
@@ -637,6 +626,10 @@
     <!-- parallax.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
+
+    <script src="../05-js/v1.js"></script>
+
+
     <script>
         // 初始化banner parallax
         var scene = document.getElementById('banner_parallax');
@@ -663,8 +656,6 @@
         window.onscroll = function(){   //onscroll事件
             console.log(st.scrollTop)   //scrollTop抓當前頁面頂部到整個html頂部的值
         }
-
-        
     </script>
 </body>
 
