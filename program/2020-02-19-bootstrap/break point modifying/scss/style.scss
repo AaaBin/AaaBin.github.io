@@ -1,0 +1,20 @@
+@import "../bootstrap-4.4.1/scss/_variables.scss";
+@import "../bootstrap-4.4.1/scss/_functions.scss";
+@import "../bootstrap-4.4.1/scss/mixins";
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+
+@import "../bootstrap-4.4.1";
+

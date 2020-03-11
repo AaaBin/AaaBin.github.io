@@ -1,0 +1,76 @@
+@mixin box_inside {
+    .box-inside{
+        width: 24%;
+        max-width: 382px;
+        margin: 15px 0 0 0;
+
+        @media screen and (max-width: 1084px) {
+            width: 48%;
+            max-width: unset;
+            margin:0 0 15px 0;
+        }
+        @media screen and (max-width:767px) {
+            .c-heading{
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width:540px) {
+            width: 97%;
+        }
+
+        img{
+            width: 100%;
+        }
+        p{
+            margin: 0;
+        }
+        .c-paragraph{
+            margin: 0;
+            @media screen and (max-width: 1399px) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 15px;
+                margin: 0;
+                line-height: 10px;
+            }
+        }
+
+        .box-inside_btn{
+            color:$color5;
+            &::before{
+                content:"";
+                background-color: $color5;
+                width: 80%;
+                height: 2px;
+                position: relative;
+                top: 25px;
+                transition: 0.2s;
+                display: block;
+                opacity: 0;
+            }
+
+
+            &::after{
+                content: ">";
+                font-size: $font-size2;
+                position: relative;
+                left: 5px;
+                transition: 0.2s ease-in-out;
+            }
+            &:hover{
+                &::after{left: 10px;}
+                &::before{opacity: 1;}
+            }
+            &:focus{
+                color: $color6;
+                background: rgba(0,103,184,.1);
+                outline: 1px solid rgba(255,255,255,.6);
+                border: 2px solid $color1;
+                &::after{left: 10px;}
+                &::before{opacity: 1;}
+            }
+        }
+    
+    }
+}

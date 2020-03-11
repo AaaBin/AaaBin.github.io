@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waether</title>
+    <link rel="icon" href="./img/sun-solid.svg">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 微軟正黑體;
+            margin: 0;
+            background-color: antiquewhite;
+            font-size: 18px;
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', sans-serif;;
+        }
+
+        .card p {
+            width: 100%;
+            line-height: 2em;
+            margin: 0;
+            border-bottom: antiquewhite 1px solid;
+        }
+
+        .weather_condition {
+            border-top: 1px antiquewhite solid;
+        }
+
+        .card h2 {
+            width: 100%;
+        }
+
+        .all {
+            width: 80%;
+            margin: 0 auto;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            min-width: 300px;
+            max-height: 500px;
+            background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 7px;
+            margin: 15px;
+            box-shadow:3px 3px 1px rgb(124, 103, 75), -3px -3px 1px rgb(124, 103, 75);
+        }
+
+        .picture {
+            width: 80%;
+            height: 240px;
+            padding: 10px;
+        }
+
+        .picture img {
+            width: 100%;
+        }
+        .time{
+            width: 100%;
+            text-align: center;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+    <div class="time"></div>
+    </div>
+
+
+
+
+
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-908DFEE0-69E2-43D0-8D23-6CD50BB2FCDE')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (weatherData) {
+                console.log(weatherData);
+                var locations = weatherData.records.location
+
+
+                locations.forEach(k => {
+                    let locationName = k.locationName; //地區名稱
+                    let weatherCondition = k.weatherElement[0].time[0].parameter.parameterName; //天氣狀況
+                    let weatherCode = k.weatherElement[0].time[0].parameter.parameterValue; //天氣代碼
+                    console.log(weatherCode)
+                    let maxTemp = k.weatherElement[4].time[0].parameter.parameterName; //最高溫
+                    let minTemp = k.weatherElement[2].time[0].parameter.parameterName; //最低溫
+                    let confort = k.weatherElement[3].time[0].parameter.parameterName; //舒適度
+
+                    // 輸出測試有沒有抓到資料
+                    console.log(locationName, weatherCondition, "最高溫:" + maxTemp, "最低溫:" + minTemp, "舒適度:" + confort, weatherCode);
+                    // 用weatherCode的資料來條件判斷該用什麼圖片
+                    if (weatherCode == 1) {
+                        var weather_pic = "./img/sun-solid.svg"
+                    } else if (weatherCode == 2 || weatherCode == 3) {
+                        var weather_pic = "./img/cloud-sun-solid.svg"
+                    } else if (weatherCode == 4 || weatherCode == 5 || weatherCode == 6 || weatherCode == 7) {
+                        var weather_pic = "./img/cloud-solid.svg"
+                    } else {
+                        var weather_pic = "./img/cloud-showers-heavy-solid.svg"
+                    }
+
+                    // 將每一筆資料寫到HTML中
+                    const allCards = document.querySelector(".all");
+                    allCards.innerHTML += `
+                    <div class="card">
+                        <div class="picture">
+                            <img src="${weather_pic}" alt="天氣狀況圖片" class="weather_pic">
+                        </div>
+                        <h2 class="country">${locationName}</h2>
+                        <p class="weather_condition">${weatherCondition}</p>
+                        <p class="max_temp">${maxTemp}</p>
+                        <p class="min_temp">${minTemp}</p>
+                        <p class="comfortable">${confort}</p>
+                    </div>
+                    `
+                });
+
+
+                //時間
+                let currentTime = new Date;
+                let dateNow = currentTime.getFullYear() + "年" + (currentTime.getMonth() + 1) + "月" + currentTime.getDate()  + "日" + currentTime.getHours() + "點" + currentTime.getMinutes() + "分"
+                console.log(dateNow)
+                let Time = document.querySelector(".time");
+                Time.innerHTML += dateNow;
+
+            });
+    </script>
+</body>
+
+</html>

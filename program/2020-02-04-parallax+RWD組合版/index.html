@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+    body{
+        margin: 0;
+        background-image: url("img/road_texture.jpg");
+    }
+    #all{
+        font-family: 'Oswald', sans-serif;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        min-width: 540px;
+    }
+    #logo_container{
+        /* logo的容器 */
+        /* background-color: rgba(0, 0, 255, 0.685); */
+        position: sticky;
+        /* position:sticky把位置固定，參考點是瀏覽器左上角，但位置會被#all限制 */
+        left: 15px;
+        top: 15px;
+        float: left;
+        padding-left: 15px;
+    }
+    #logo{
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        background-color: darkred;
+        background-image: url("https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: cover;
+        background-position: center;
+        box-shadow:4px 4px 7px  rgba(0,0,0,0.5);
+        /* position: absolute; */
+        /* left: 12%; */
+        /* top: 15px; */
+        /* position: sticky; */
+        /* float: left; */
+    }
+    #btn_bar{
+        padding-top: 41px;
+        position: sticky;
+        right: 15px;
+        top: 15px;
+        float: right;
+    }
+    #background{
+        background-color:brown;
+        height: 50vh;
+        /* vh:viewport height 以瀏覽器內容高為基準，50vh代表50%的瀏覽器高 */
+        width: 100%;
+        padding-top: 50vh;
+        /* padding-top讓下方黑底區塊向下對齊 */
+        background-image: url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    #background_sec{        
+        background-color:brown;
+        height: 50vh;
+        width: 100%;
+        padding-top: 50vh;
+        background-image: url("https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    #background_thr{        
+        background-color:brown;
+        height: 50vh;
+        width: 100%;
+        padding-top: 50vh;
+        background-image: url("https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .b_box{
+        width: 100%;
+        height: calc(25vh + 50px);
+        /* 高度扣掉padding的部分 */
+        background-color: rgba(0,0,0,0.5);
+        padding-top: calc(25vh - 50px);
+        /* padding的像素除了25vh還要扣btn高度的一半 */
+    }
+    .btn{
+        width: 200px;
+        height: 100px;
+        background-color: chocolate;
+        margin-left: auto;
+        margin-right: auto;
+        transition: width 1s , opacity 1s , box-shadow 1s;
+        /* 設定要漸變的屬性跟動畫時間 */
+        opacity: 0.7;
+        /* 設定透明度 */
+        font-size: 32px;
+        line-height: 100px;
+        text-align: center;
+    }
+    .btn:hover{
+        /* XXX:hover代表游標移動到上方時的效果 */
+        background-color: chocolate;
+        box-shadow:10px 10px 20px black;
+        width: 300px;
+        opacity: 1;
+    }
+    .top_btn{
+        padding: 10px 30px;
+        line-height: 18px;
+        background-color: rgba(0, 0, 0, 0.719);
+        margin-right: 15px;
+        float: left;
+        color: rgb(255, 255, 255);
+    }
+    .top_btn:hover{
+        background-color: black;
+    }
+    a:link{
+        text-decoration: none;
+        color: rgb(212, 168, 153);
+    }
+    a:visited{
+        color: chocolate;
+    }
+    a:hover{
+        color: rgb(58, 199, 30);
+    }
+    a:active{
+        color: darkgray;
+    }
+
+
+    
+    </style>
+</head>
+
+<body>
+    <div id="all">
+            <div id="logo_container">
+            <div id="logo">
+                <a href="#background" ></a>
+            </div>
+            </div>
+            <div id="btn_bar">                
+            <div id="btn_A" class="top_btn">
+                <a href="#background" >SECTION A</a>  
+                 <!--<a href>標籤可以指定超連結，也可以用ID作為連結對象-->              
+            </div>
+            <div id="btn_B" class="top_btn">
+                <a href="#background_sec" >SECTION B</a>
+            </div>
+            <div id="btn_C" class="top_btn">
+                <a href="#background_thr" >SECTION C</a>
+            </div>
+            </div>
+        
+        <div id="background">
+            <div id="blackbox" class="b_box">
+                <div id="btn" class="btn">test button</div>
+            </div>        
+        </div>
+        <div id="background_sec">
+            <div id="blackbox_sec" class="b_box">
+                <div id="btn_sec" class="btn">test button</div>
+            </div>
+        </div>
+        <div id="background_thr">
+            <div id="blackbox_thr" class="b_box">
+                <div id="btn_thr" class="btn">test button</div>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>

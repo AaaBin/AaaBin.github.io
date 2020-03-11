@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft_fake</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="https://c.s-microsoft.com/favicon.ico?v2">
+    
+
+</head>
+
+<body>
+    <!-- navbar>>> -->
+    <header class="navbar">
+        <nav class="nav_box">
+
+            <!-- 漢堡條 -->
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- nav的左邊區塊 -->
+            <div class="nav-l">
+                <li id="logo">
+                    <a href="" aria-label="Microsoft">
+                    <img alt="" class="logo-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31">
+                    </a>
+                </li>
+                <div class="nav-mid">
+                    <ul class="none_under_860">
+                        <li class="under_line">
+                            <a  href="">Office</a>
+                        </li>
+                        <li class="under_line">
+                            <a  href="">Windows</a>
+                        </li>
+                        <li class="under_line">
+                            <a  href="">Surface</a>
+                        </li>
+                        <li class="under_line">
+                            <a  href="">Xbox</a>
+                        </li>
+                        <li class="under_line">
+                            <a id="l1_support"  href="">支援</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+                    <!-- nav的右邊區塊 -->
+                    <li id="all_microsoft" class="pc none_under_860 under_line">
+                        <a href="">所有 Microsoft</a>
+                    </li>
+                    <li id="search" class="under_line">
+                        <a href="" class="bar_text">搜尋</a> 
+                        <div class="icon search_btn"><img src="./img/search_icon.png"></div>                        
+                    </li>
+                    <li id="shopping_cart" class="under_line">
+                        <a href="" class="bar_text">購物車</a> 
+                        <div class="icon"><img src="./img/shopping-cart.svg"></div>                        
+                    </li>
+                    <li id="login">
+                        <a href="" class="bar_text">登入</a> 
+                        <div class="icon login_btn"><img src="./img/login.JPG"></div>
+                    </li>
+        </nav>
+    </header>
+    <!-- <<<navbar -->
+
+    <main class="main">  
+    
+        <!-- 置中用 -->
+        <div class="main_box">
+
+            <!-- banner one -->
+            <a href="">
+            <picture class="banner1 banner">
+                <source srcset="./img/banner1_size1.jpg" media="(min-width:1083px)">
+                <source srcset="./img/banner1_size2.webp" media="(min-width:768px)">
+                <img src="./img/banner1_size3.webp" alt="surface圖片">
+                <!-- 用source標籤，設定在一定條件下更換圖片 -->
+                <!-- 圖片都是用img標籤，大小則是依據父層寬度，來達到等比縮放的效果 -->
+                <!-- banner上的文字則獨立區來，利用position定位 -->
+                <div class="text_box">
+                    <h2 class="b-heading">全新的 Surface Pro 7</h2>        
+                    <div class="c-paragraph">
+                        <p>纖變萬化</p>
+                    </div>
+                    <div class="btn">立即選購 ></div>
+                </div>
+
+                <!-- 左右切換圖片用的按鈕 -->
+                <div class="banner1_btn_l banner_btn_lr"></div>
+                <div class="banner1_btn_r banner_btn_lr"></div>
+
+            </picture>
+            </a>
+
+            <!-- banner下方的四個產品介紹方塊 -->
+            <section class="box-s box-s1">
+                <!-- 內容區塊的大小都是相同的，所以用一樣的標籤重複四個 -->
+                <div class="box-inside">
+                    <!-- 整個頁面有分成幾種大小的標題或是文字，會同時切換大小所以class有分類 -->
+                    <img class="pc3" src="./img/p1.jpg" alt="surface laptop 3">
+                    <h3 class="c-heading">全新的 Surface Laptop 3</h3>
+                    <article class="c-paragraph">
+                        <p>透過纖薄、輕巧且優雅的設計、更快的效能和長達 11.5 小時的電池續航力，強而有力地展現自我。</p>
+                    </article>
+                    <button class="box-inside_btn">立即選購</button>
+                </div>
+                
+                <!-- 內容區塊2 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p2.jpg" alt="surface book 2">
+                    <h3 class="c-heading">Surface Book 2</h3>
+                    <article  class="c-paragraph">
+                        <p>極致筆記型電腦的超強效能。</p>
+                    </article>
+                    <button class="box-inside_btn">立即選購</button>
+                </div>
+
+                <!-- 內容區塊3 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p3.jpg" alt="Xbox">
+                    <h3 class="c-heading">Xbox One X</h3>
+                    <article class="c-paragraph">
+                        <p>世界上最強的主機</p>
+                    </article>
+                    <button class="box-inside_btn">立即選購</button>
+                </div>
+
+                <!-- 內容區塊4 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p4.jpg" alt="Xbox Game Pass Ultimate">
+                    <h3 class="c-heading">Xbox Game Pass Ultimate</h3>
+                    <article class="c-paragraph">
+                        <p>Xbox Live Gold 和超過 100 款高品質的主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</p>
+                    </article>
+                    <button class="box-inside_btn">立即加入</button>
+                </div>
+                
+            </section>
+
+            <!-- 第二區banner，跟上面是一樣的結構跟大小 -->
+            <a href="">
+            <picture class="banner2 banner">     
+                <source srcset="./img/banner2_size1.webp" media="(min-width:1083px)">
+                <source srcset="./img/banner2_size2.jpg" media="(min-width:768px)">
+                <img src="./img/banner2_size3.webp" alt="xbox圖片">      
+                
+                <div class="text_box">
+                    <h2 class="b-heading">Xbox One S</h2>        
+                    <div class="c-paragraph">
+                        <p>終極遊戲和 4K Ultra HD 娛樂系統。</p>
+                    </div>
+                    <div class="btn">了解更多 ></div>                
+                </div>              
+                <div class="banner2_btn_l banner_btn_lr"></div>
+                <div class="banner2_btn_r banner_btn_lr"></div>
+            </picture>
+            </a>
+
+            
+            <div class="headline">
+                <h2 class="d-heading">適用於工作地點</h2>
+            </div>
+
+            <section class="box-s box-s2">
+                <!-- 第二部分的內容區塊1 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p5.jpg" alt="認識 Surface Pro 7 商務版">
+                    <h3 class="c-heading">認識 Surface Pro 7 商務版</h3>
+                    <article class="c-paragraph">
+                        <p>過纖變萬化的經典變形平板，從筆記型電腦變成平板電腦或攜帶方便的工作室，以前所未有的方式一起合作。</p>
+                    </article>
+                    <button class="box-inside_btn">深入了解</button>
+                </div>
+
+                <!-- 第二部分的內容區塊2 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p6.jpg" alt="商務用 Office 365">
+                    <h3 class="c-heading">商務用 Office 365</h3>
+                    <article class="c-paragraph">
+                        <p>不論您是連線或離線，都可隨處存取您的檔案。</p>
+                    </article>
+                    <button class="box-inside_btn">立即選購</button>
+                </div>
+
+                <!-- 第二部分的內容區塊3 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p7.jpg" alt="Xbox">
+                    <h3 class="c-heading">Windows 10 企業版</h3>
+                    <article class="c-paragraph">
+                        <p>下載 IT 專業人員適用的 90 天免費評估版本。</p>
+                    </article>
+                    <button class="box-inside_btn">立即下載</button>
+                </div>
+
+                <!-- 第二部分的內容區塊4 -->
+                <div class="box-inside">
+                    
+                    <img class="pc3" src="./img/p8.jpg" alt="探索 Kubernetes">
+                    <h3 class="c-heading">了解 Kubernetes</h3>
+                    <article class="c-paragraph">
+                        <p>運作方式，並立即開始雲端原生應用程式開發。</p>
+                    </article>
+                    <button class="box-inside_btn">開始使用</button>
+                </div>
+                
+            </section>
+
+            
+            <div class="social_contact">
+                <p>關注 Microsoft</p>
+                    <ul>
+                        <li>
+                            <a href="" title="Follow Microsoft on Facebook"> 
+                                <img src="./img/facebook.png" width="28px" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="Follow Microsoft on YouTube">
+                                <img src="./img/youtube.png" width="28px" alt="Youtube">
+                            </a>
+                        </li>                       
+                    </ul>                    
+            </div>
+        </div>
+    </main>
+
+    <!-- footer區塊用list的方式分組 -->
+    <footer class="footer">
+        <nav class="footer_text">
+            <div id="footer-1" class="footer_box">
+                <ul class="footer_btn">
+                    <li class="footer_btn_title">最新動向</li>
+                    <li><a href="">Surface Go</a></li>
+                    <li><a href="">Surface Book 2</a></li>
+                    <li><a href="">Surface Pro</a></li>
+                    <li><a href="">Windows 10 應用程式</a></li>
+                    <li><a href="">Office 應用程式</a></li>
+                </ul>
+            </div>
+            <div id="footer-2" class="footer_box">
+               
+                <ul class="footer_btn">
+                    <li class="footer_btn_title">Microsoft Store</li>
+                    <li><a href="">帳戶設定檔</a></li>
+                    <li><a href="">下載中心</a></li>
+                    <li><a href="">Microsoft Store 支援</a></li>
+                    <li><a href="">退貨/退款</a></li>
+                    <li><a href="">訂單追蹤</a></li>
+                </ul>
+            </div>
+            <div id="footer-3" class="footer_box">
+                
+                <ul class="footer_btn">
+                    <li class="footer_btn_title">教育</li>
+                    <li><a href="">Microsoft 在教育領域的應用</a></li>
+                    <li><a href="">學生適用的 Office</a></li>
+                    <li><a href="">學校適用的 Office 365</a></li>
+                    <li><a href="">Microsoft Azure 在教育領域的應用</a></li>
+                </ul>
+            </div>
+            <div id="footer-4" class="footer_box">
+                
+                <ul class="footer_btn">
+                    <li class="footer_btn_title">企業</li>
+                    <li><a href="">Azure</a></li>
+                    <li><a href="">AppSource</a></li>
+                    <li><a href="">汽車</a></li>
+                    <li><a href="">政府機構</a></li>
+                    <li><a href="">醫療保健</a></li>
+                    <li><a href="">製造</a></li>
+                    <li><a href="">金融服務</a></li>
+                    <li><a href="">零售</a></li>
+                </ul>
+            </div>
+            <div id="footer-5" class="footer_box">
+                
+                <ul class="footer_btn">
+                    <li class="footer_btn_title">開發人員</li>
+                    <li><a href="">Microsoft Visual Studio</a></li>
+                    <li><a href="">Windows 開發人員中心</a></li>
+                    <li><a href="">開發人員網路</a></li>
+                    <li><a href="">TechNet</a></li>
+                    <li><a href="">Microsoft 開發人員計畫</a></li>
+                    <li><a href="">Channel 9</a></li>
+                </ul>
+            </div>
+            <div id="footer-6" class="footer_box">
+                
+                <ul class="footer_btn">
+                    <li class="footer_btn_title">公司</li>
+                    <li><a href="">人才招募</a></li>
+                    <li><a href="">公司新聞</a></li>
+                    <li><a href="">Microsoft 隱私權</a></li>
+                    <li><a href="">投資者</a></li>
+                    <li><a href="">安全性</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </footer>   
+
+      
+   
+</body>
+</html>

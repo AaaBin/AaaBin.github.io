@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: mediumaquamarine;
+        }
+        #container{
+            padding-top: calc(50vh - 497px);
+            width: 738px;
+            /* background-color: lightskyblue; */
+            margin: 0 auto;
+        }
+        #content_A{
+            width: 738px;
+            margin-bottom: 10px;
+            background-image: url("img/view_1.jpg");
+        }
+        #content_B{
+            width: 364px;
+            margin-right: 10px;
+            background-image: url("img/view_2.jpg");
+        }
+        #content_C{
+            width: 364px;
+            background-image: url("img/view_3.jpg");
+        }
+        .content{
+            background-color: lightslategray;
+            float: left;
+            height: 492px;
+            transition: 0.7s;
+            background-position: center;
+            background-size: cover;
+        }
+        .mask{
+            width: 100%;
+            height: 492px;
+            background-color: lightslategray;
+            opacity: 0.8;
+            transition:  0.5s;
+        }
+        .mask:active{
+            opacity: 0;
+        }
+        
+        
+
+    
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content_A" class="content"><div id="mask_A" class="mask"></div></div>
+        <div id="content_B" class="content"><div id="mask_B" class="mask"></div></div>
+        <div id="content_C" class="content"><div id="mask_C" class="mask"></div></div>
+    </div>
+</body>
+</html>

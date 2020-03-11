@@ -1,0 +1,438 @@
+*{
+    box-sizing: border-box;
+    line-height: 22px;
+}
+body{
+    margin: 0;
+    font-family:Microsoft JhengHei;
+    font-size: 15px;
+}
+h3{
+    margin: 37px 0 5px 0;
+}
+.c-paragraph{
+    margin: 0 0 15px 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    /* 內容區塊下方的按鈕 */
+    border: 0;
+    background-color: unset;
+    color: unset;
+    font-size: unset;
+    font-family: unset;
+    padding: 3px 15px 3px 0;
+}
+
+/* nav>>> */
+
+/* 漢堡條，先不顯示 */
+.hamburger{
+    display: none;
+}
+.navbar{
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_box{
+    width: 90%;
+    max-width: 1600px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+}
+#logo{
+    margin: 0;
+}
+#logo img{
+    width: 108px;
+}
+
+.nav_box a{
+    position: relative;
+    padding:  13px 10px;
+}
+.nav_box li{
+    padding: 0;
+}
+.nav_box li div img{
+    width: 100%;
+}
+.nav-l{
+    display: flex;
+    align-items: center;
+    margin: 0 auto 0 0 ;
+}
+.bar_text{
+    margin-right: 10px;
+}
+.icon{
+    width: 20px;
+    position: relative;
+    top: 5px;
+}
+.login_btn{
+    width: 32px;
+    position: relative;
+    top:8px
+}
+
+/* 利用偽元素after做文字hover時的底線 */
+.under_line a::after{
+    content: "";
+    width: 82%;
+    height: 2px;
+    background-color: #616161;
+    bottom: 10px;
+    position: absolute;
+    right: 3px;
+    display: none;
+}
+.under_line:hover a::after{
+    display: block;
+}
+.nav_box > .under_line{
+    padding: 0 10px;
+}
+
+/* 做focus時的選取線，outline屬性 */
+.nav_box a:focus , .footer_text a:focus{
+    outline: 1px dashed currentColor;
+}
+.nav_box a:focus::after{
+    display: block;
+}
+
+
+/************* main ***********/
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_box{
+    /* 寬度取跟navbar一樣的90%來達到同步的縮放效果 */
+    width: 90%;
+    max-width: 1600px;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.banner:hover .banner_btn_lr{
+    display: block;
+}
+.banner_btn_lr{
+    width: 46px;
+    height: 46px;
+    background-color: lightgrey;
+    position: absolute;
+    border-radius: 23px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.banner1_btn_l,.banner2_btn_l{
+    left: 0;
+}
+.banner1_btn_r,.banner2_btn_r{
+    right: 0;
+}
+
+/* 設定banner圖片寬度取父層的100%，讓圖片隨螢幕寬度固定寬高比變化 */
+.banner img{
+    width: 100%;
+}
+
+/* Banner裡面的文字 */
+.text_box{
+    position: absolute;
+    left: 6%;
+}
+.b-heading{
+    font-size: 46px;
+    font-weight: 1000;
+    margin:0.5em 0;
+}
+.btn{
+    display: inline-block;
+    background-color: black;
+    color: white;  
+    padding: 10px 22px;
+}
+
+.box-s{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.box-s2{
+    margin: 20px 0;
+}
+.box-inside{
+    width: 24%;
+    max-width: 382px;
+    margin: 15px 0 0 0;
+}
+.box-inside img{
+    width: 100%;
+}
+.box-inside p{
+    margin: 0;
+}
+.box-inside_btn{
+    color:rgb(0, 93, 166);
+    z-index: 100;
+    font-weight: 800;
+}
+/* 用after做按鈕後的>標誌 */
+.box-inside_btn::after {
+    content: ">";
+    font-size: 20px;
+    position: relative;
+    left: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.box-inside_btn:hover::after{
+    left: 10px;
+}
+.box-inside_btn:focus{
+    color: #005da6;
+    background: rgba(0,103,184,.1);
+    outline: 1px solid rgba(255,255,255,.6);
+    border: 2px solid #000;
+}
+.box-inside_btn:focus::after{
+    left: 10px;
+}
+/* 用before做按鈕的底線 */
+.box-inside_btn::before{
+    content:"";
+    background-color: rgb(0, 94, 167);
+    width: 80%;
+    height: 2px;
+    position: relative;
+    top: 25px;
+    transition: 0.2s;
+    display: block;
+    opacity: 0;
+}
+.box-inside_btn:hover::before , .box-inside_btn:focus::before{
+    opacity: 1;
+}
+.box-inside .c-paragraph{
+    margin: 0;
+}
+
+/* 第二區塊的banner跟內容區塊中間的標題 */
+.headline{
+    width: 100%;
+    height: 32px;
+    margin-top: 30px;
+}
+.headline h2{
+    font-size: 24px;
+}
+.social_contact{
+    width: 100%;
+    height: 32px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+ul {
+    margin: 0;
+    padding: 0 12px;
+    display: inline-block;
+    display: flex;
+    flex-direction:row;      
+}
+li {
+    list-style: none;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+}
+
+
+.footer{
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    justify-content: center;
+
+}
+.footer_text{
+    width: 90%;
+    max-width: 1600px;
+    display: flex;
+}
+.footer_box{
+    flex: 1;
+    background-color: rgb(242, 242, 242);
+    padding: 36px 0 4px;
+}
+.footer_btn{
+    color: #616161;
+    flex-direction: column;
+}
+.footer_btn a{
+    color: #616161;
+}
+.footer_btn a:hover{
+    color: rgba(0,0,0,.9);
+    text-decoration: underline;
+}
+.footer_btn li{
+    font-size: 13px;
+    display: block;
+    padding: 7px 4px;
+    line-height: unset;
+}
+.footer_btn .footer_btn_title{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1399px) {
+    
+    .bar_text{
+        display: none;
+    }
+    .box-s{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+    .b-heading{
+    font-size: 24px;
+    font-weight: 600;
+    }
+    .c-heading{
+        font-size: 20px;
+    }
+}
+
+
+
+@media screen and (max-width:1084px) {
+
+    .nav_box{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .main_box{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+    .banner{
+        /* height: 56vw; */
+        background-color: #e6e6e6;
+    }
+    .text_box{
+        left: 7%;
+    }
+    
+    .box-s{
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content:space-around;
+    }
+    .box-inside{
+        width: 48%;
+        max-width: unset;
+        margin:0 0 15px 0;
+    }
+    .headline{
+        width: 88%;
+    }
+    .social_contact{
+        width: 88%;
+    }
+    .footer_text{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .footer_box{
+        padding: 36px 0 4px 20px;
+        min-width: 33%;
+    }
+
+
+}
+
+@media screen and (max-width:860px){
+    .hamburger{
+        display: inline-block;
+        order: -2;
+        display: flex;
+        align-items: center;
+    }
+    .none_under_860{
+        display: none;
+    }
+    .nav_box{
+        justify-content:center;
+    }
+    #search{
+        order:-1;
+    }
+    .nav-l{
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:767px){
+    .text_box{
+        position: unset;
+        left: unset;
+        margin: 13% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .b-heading{
+        margin: 2px 0;
+    }
+    .b-heading , .c-heading{
+        font-size: 20px;
+    }
+    .c-paragraph{
+        font-size: 15px;
+        margin: 0;
+        line-height: 10px;
+    }
+}
+
+@media screen and (max-width:540px){
+    .box-inside{
+        width: 97%;
+    }
+    .footer_box{
+        width: 90%;
+        min-width: 60%;
+    }
+    .footer_text{
+        align-content: flex-start;
+    }
+}

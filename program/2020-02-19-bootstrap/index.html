@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>the simpsons</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .card {
+            min-width: 0;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        #parallax {
+            width: 100%;
+            height: 50vh;
+            background-image: url("https://miro.medium.com/max/3675/0*BZKRwFn6i37o_yM_.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.452);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">THE SIMPSONS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
+        <section id="parallax" class="mb-5">
+            <div class="mask">
+                <h1 class="bg-secondary text-light  p-3 d-none d-md-block">The simpsons</h1>
+            </div>
+        </section>
+        <section id="cards">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="card_area p-1  col-12 col-md-4 mx-auto">
+                        <div class="card  p-1 shadow-sm">
+                            <img src="https://cdn.vox-cdn.com/thumbor/hMpmwPo2Y-6dfuP05U_PkS-Q1Tc=/148x0:1768x1080/1400x1400/filters:focal(148x0:1768x1080):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/47413330/the-simpsons-tv-series-cast-wallpaper-109911.0.0.jpeg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_area p-1  col-12 col-md-4 mx-auto">
+                        <div class="card  p-1 shadow-sm">
+                            <img src="https://cdn.vox-cdn.com/thumbor/hMpmwPo2Y-6dfuP05U_PkS-Q1Tc=/148x0:1768x1080/1400x1400/filters:focal(148x0:1768x1080):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/47413330/the-simpsons-tv-series-cast-wallpaper-109911.0.0.jpeg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_area p-1  col-12 col-md-4 mx-auto">
+                        <div class="card  p-1 shadow-sm">
+                            <img src="https://cdn.vox-cdn.com/thumbor/hMpmwPo2Y-6dfuP05U_PkS-Q1Tc=/148x0:1768x1080/1400x1400/filters:focal(148x0:1768x1080):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/47413330/the-simpsons-tv-series-cast-wallpaper-109911.0.0.jpeg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </section>
+        <section id="pic_n_content">
+            <div class="container mb-5">
+                <div class="row bg-secondary p-5">
+                    <div class="col-12 col-md-6 p-3 bg-light">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error officiis quasi sint
+                        quam iure necessitatibus quis aliquid laborum reprehenderit labore omnis explicabo rerum autem
+                        cumque, expedita, facilis possimus sequi!
+                    </div>
+                    <div class="pic_area col-12 col-md-6 order-md-first p-3 bg-light">
+                        <img src="https://cdn-statics.thebubble.com/wp-content/uploads/simpsons-cover-735x395.png"
+                            class="card-img"></img>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer id="footer" class="row w-100 bg-light">
+        <span class="footer_text p-3 mx-auto">
+            此頁面內容僅為全端與python資料探勘工程師養成班使用
+        </span>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
