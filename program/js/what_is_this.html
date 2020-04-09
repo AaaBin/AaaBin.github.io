@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what is this</title>
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/js-512.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .all {
+            background-color: bisque;
+            /* min-width: 500px; */
+            min-height: calc(100vh - 400px);
+            margin: auto;
+            padding: 200px 100px;
+        }
+
+        .all>div:nth-child(n) {
+            background-color: burlywood;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .all>div:nth-child(2n) {
+            background-color: whitesmoke;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="box1">1.全域範圍內的函式，this代表window物件>>windowSize:</div>
+        <div class="box2">2.用var宣告的變數會被寫在window上，let的不會，所以當this代表window時，沒辦法找到用let、const宣告的變數>></div>
+        <div class="box3">3.當函式是在物件內被定義時，this指向函式所在的物件>></div>
+        <div class="box4">4.將定義在全域的函式當成物件的方法使用後，就相等於是在物件內被定義的函式，this會指向函式所在的物件，跟第3點一樣</div>
+        <div class="box5">5.DOM 搭配 addEventListener 時，此 this 所指向的則是該 DOM。點擊畫面上任何一區域，該區域則會加上紅線。</div>
+    </div>
+    <script>
+        // 1.全域範圍內的函式，this代表window物件
+        function windowSize() {
+            let width = this.innerWidth;
+            let height = this.innerHeight;
+            return [height, width];
+        }
+        let box1 = document.querySelector('.box1');
+        box1.textContent = box1.textContent + windowSize();
+
+        // 2.用var宣告的變數會被寫在window上，let、const宣告的不會
+        var number1 = 500;
+        let number2 = 50;
+        const number3 = 75
+        console.log(window);
+        let show = function () {
+            let box2 = document.querySelector('.box2');
+            box2.textContent = box2.textContent + this.number1;
+            // 所以當this代表window時，沒辦法找到用let宣告的變數
+            box2.textContent = box2.textContent + ";" + this.number2;
+            box2.textContent = box2.textContent + ";" + this.number3;
+        }
+        show();
+
+        // 3.當函式是在物件內被定義時，this指向函式所在的物件
+        let shape = {
+            width: 100,
+            height: 500,
+            thisH: this.width,
+            getArea: function () {
+                return this.width * this.height;
+            }
+        }
+        let area = shape.getArea();
+        let box3 = document.querySelector(".box3");
+        box3.innerHTML = box3.innerHTML + area;
+
+        // 4.將定義在全域的函式當成物件的方法使用後，就相等於是在物件內被定義的函式，this會指向函式所在的物件，跟第3點一樣
+        let showWidth = function () {
+            let box4 = document.querySelector('.box4');
+            box4.textContent = box4.textContent + this.width;
+        }
+        shape.showWidth = showWidth;
+        shape.showWidth();
+
+        // 5.DOM 搭配 addEventListener 時，此 this 所指向的則是該 DOM。以下這段程式碼可以貼在任何網頁下的 Console，接下來點擊畫面上任何一區域，該區域則會加上紅線。
+        var elements = document.getElementsByTagName('div');
+        function changeDOM() {
+            console.log(this); // 指向當前的 DOM
+            this.style.border = '1px solid red'
+        }
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', changeDOM, false);
+        }
+    </script>
+
+</body>
+
+</html>
